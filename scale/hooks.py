@@ -158,6 +158,15 @@ app_license = "mit"
 
 # Overriding Methods
 # ------------------------------
+
+
+override_whitelisted_methods = {
+    # "erpnext.stock.get_item_details.get_price_list_rate": "scale.my_pos.list_price",
+    "erpnext.selling.page.point_of_sale.point_of_sale.search_by_term" : "scale.my_pos.searching_term"
+}
+
+
+
 #
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "scale.event.get_events"

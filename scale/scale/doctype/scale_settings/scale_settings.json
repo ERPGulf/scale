@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-21 09:32:16.739609",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "barcode_settings_section",
+  "prefix_included_or_not",
+  "no_of_prefix_characters",
+  "prefix",
+  "item_code_starting_digit",
+  "item_code_total_digits",
+  "weight_starting_digit",
+  "weight_total_digits",
+  "weight_decimals",
+  "price_included_in_barcode_or_not",
+  "price_starting_digit",
+  "price_total_digit",
+  "price_decimals"
+ ],
+ "fields": [
+  {
+   "fieldname": "barcode_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Barcode settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "prefix_included_or_not",
+   "fieldtype": "Check",
+   "label": "Prefix included or not"
+  },
+  {
+   "fieldname": "no_of_prefix_characters",
+   "fieldtype": "Data",
+   "label": "No. of prefix characters"
+  },
+  {
+   "fieldname": "prefix",
+   "fieldtype": "Data",
+   "label": "Prefix"
+  },
+  {
+   "fieldname": "item_code_starting_digit",
+   "fieldtype": "Data",
+   "label": "Item code starting digit"
+  },
+  {
+   "fieldname": "item_code_total_digits",
+   "fieldtype": "Data",
+   "label": "Item code total digits"
+  },
+  {
+   "fieldname": "weight_starting_digit",
+   "fieldtype": "Data",
+   "label": "Weight starting digit"
+  },
+  {
+   "fieldname": "weight_total_digits",
+   "fieldtype": "Data",
+   "label": "Weight total digits"
+  },
+  {
+   "fieldname": "weight_decimals",
+   "fieldtype": "Data",
+   "label": "Weight decimals"
+  },
+  {
+   "default": "0",
+   "fieldname": "price_included_in_barcode_or_not",
+   "fieldtype": "Check",
+   "label": "Price included in barcode or not"
+  },
+  {
+   "fieldname": "price_starting_digit",
+   "fieldtype": "Data",
+   "label": "Price starting digit"
+  },
+  {
+   "fieldname": "price_total_digit",
+   "fieldtype": "Data",
+   "label": "Price total digit"
+  },
+  {
+   "fieldname": "price_decimals",
+   "fieldtype": "Data",
+   "label": "Price decimals"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-05-21 18:03:07.660013",
+ "modified_by": "Administrator",
+ "module": "Scale",
+ "name": "Scale Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
