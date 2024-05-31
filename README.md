@@ -23,13 +23,13 @@ This Frappe app, specifically designed for the POS module within ERPNext. Seamle
 1. Go to Scale Settings in the ERPNext interface.
 2. Configure the barcode settings including prefix, item code, weight, and price settings.
 
-   ![Setting page](images/setting_page.png)
+   <img src="images/setting_page.png" alt="Setting page" width="300"/>
 
 ## Using the App
 
 - Scan the barcode that printed by weighing machine on POS field as you do with regular item. It will calculate weight and price as per your scale settings.
 
-  ![Cart](images/item_cart.png)
+  <img src="images/item_cart.png" alt="Cart" width="150" height="200"/>
 
 - Make sure that your scale settings follows scale manufacture standard.
 
