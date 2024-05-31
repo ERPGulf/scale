@@ -1,0 +1,17 @@
+[33mcommit 1dfa6751552b1face4ae616c62f81cf0ee59bfeb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: fkalpana <support@erpgulf.com>
+Date:   Sat May 25 11:07:26 2024 +0300
+
+    Update __init__.p
+
+[33mcommit 0616e1a01e464428c845656c1612bb591c999565[m
+Author: fkalpana <support@erpgulf.com>
+Date:   Sat May 25 09:11:06 2024 +0300
+
+    first commit
+
+[33mcommit a4b560c11be4a23ad4eb6ebdf8504b4917e48630[m
+Author: fkalpana <support@erpgulf.com>
+Date:   Thu Mar 28 10:55:36 2024 +0300
+
+    feat: Initialize App
