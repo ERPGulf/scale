@@ -5,7 +5,7 @@ from frappe.utils.nestedset import get_root_of
 
 import json
 from erpnext.accounts.doctype.pricing_rule.pricing_rule import get_pricing_rule_for_item
-from erpnext.stock.get_item_details import get_basic_details, get_default_bom, get_gross_profit, get_item_tax_map, get_item_tax_template, get_party_item_code, get_pos_profile_item_details, get_price_list_currency_and_exchange_rate, get_price_list_rate, get_price_list_rate_for, insert_item_price, process_args, process_string_args, remove_standard_fields, set_valuation_rate, update_bin_details, update_party_blanket_order, validate_conversion_rate, validate_item_details
+from erpnext.stock.get_item_details import get_basic_details, get_bin_details, get_default_bom, get_gross_profit, get_item_tax_map, get_item_tax_template, get_party_item_code, get_pos_profile_item_details, get_price_list_currency_and_exchange_rate, get_price_list_rate, get_price_list_rate_for, insert_item_price, process_args, process_string_args, remove_standard_fields, set_valuation_rate, update_bin_details, update_party_blanket_order, validate_conversion_rate, validate_item_details
 from frappe.utils.data import add_days, cint, flt
 
 
@@ -321,8 +321,22 @@ def list_item_details(args, doc=None, for_validate=False, overwrite_warehouse=Tr
     if args.customer and cint(args.is_pos):
         out.update(get_pos_profile_item_details(args.company, args, update_data=True))
 
-    if item.is_stock_item:
-        update_bin_details(args, out, doc)
+    # if item.is_stock_item:
+    #     update_bin_details(args, out, doc)
+
+    if args.get("doctype") == "Material Request" and args.get("material_request_type") == "Material Transfer":
+        out.update(get_bin_details(args.item_code, args.get("from_warehouse")))
+
+    elif out.get("warehouse"):
+        if doc and doc.get("doctype") == "Purchase Order":
+			# calculate company_total_stock only for po
+            bin_details = get_bin_details(
+				args.item_code, out.warehouse, args.company, include_child_warehouses=True
+			)
+        else:
+            bin_details = get_bin_details(args.item_code, out.warehouse, include_child_warehouses=True)
+
+        out.update(bin_details)
 
     # update args with out, if key or value not exists
     for key, value in out.items():
