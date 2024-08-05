@@ -1,0 +1,15 @@
+{
+  "name": "scale",
+  "version": "1.0.0",
+  "description": "This Frappe app, specifically designed for the POS module within ERPNext. Seamlessly integrate weighing machines with ERPNext POS system, supporting any type and brand of weighing scales and adapting effortlessly to various settings. Perfect for businesses in the vegetable, fruit, nut, bakery, and sweet shop sectors, this app enhances your POS system for a smooth and efficient experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "onscan.js": "^1.5.2"
+  }
+}

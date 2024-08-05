@@ -13,9 +13,23 @@ app_license = "mit"
 # app_include_css = "/assets/scale/css/scale.css"
 # app_include_js = "/assets/scale/js/scale.js"
 
+# Path: hooks.py
+
+# app_include_js = "/assets/scale/js/override.js"
+
+app_include_js = [
+    "/assets/scale/js/onscan.js",
+    "/assets/scale/js/override_controller.js",
+    "/assets/scale/js/override_item_selector.js"
+]
+ 
+
+
+
+
 # include js, css files in header of web template
 # web_include_css = "/assets/scale/css/scale.css"
-# web_include_js = "/assets/scale/js/scale.js"
+# web_include_js = "/assets/scale/js/override.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "scale/public/scss/website"
@@ -25,10 +39,14 @@ app_license = "mit"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+
+
+# page_js = {"point_of_sale": "scale/public/js/override.js"}
+
+
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+# doctype_js = {"doctype" : "public/js/override.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -161,11 +179,9 @@ app_license = "mit"
 
 
 override_whitelisted_methods = {
-    # "erpnext.stock.get_item_details.get_price_list_rate": "scale.my_pos.list_price",
-    "erpnext.selling.page.point_of_sale.point_of_sale.search_by_term" : "scale.my_pos.searching_term"
+    "erpnext.selling.page.point_of_sale.point_of_sale.search_by_term" : "scale.my_pos.searching_term",
+    "scale.my_pos.get_test_qty" : "scale.my_pos.get_test_qty",
 }
-
-
 
 #
 # override_whitelisted_methods = {
